@@ -8,10 +8,33 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Question 3</title>
     <script src="https://kit.fontawesome.com/bb91a0ff73.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="d-flex justify-content-center flex-nowrap">
+            <div class="bg-secondary text-white mx-5 mt-1">
+                <p class="h2">On a scale 1-5, how much do you like 🐢?</p>
+            </div>
+        </div>
+        <div class="bg-secondary text-white mt-5">
+            <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+        </div>
+    
+        <div class="d-flex justify-content-center flex-nowrap">
+            <div class="bg-secondary text-white mx-5 mt-5">
+                <button class="btn btn-primary m-5" type="submit">
+                    <i class="fas fa-chevron-left fa-lg" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-primary m-5" type="submit">
+                    <i class="fas fa-chevron-right fa-lg" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 
