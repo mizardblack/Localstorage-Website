@@ -21,17 +21,22 @@
         </div>
         <div class="d-flex justify-content-center flex-nowrap">
             <div class="bg-secondary text-white mx-5 mt-2">
-                <p class="h1">You are a person!</p>    
+                <p class="h1">You are a <span id="type"></span> person!</p>    
             </div>
         </div>
         <div class="d-flex justify-content-center flex-nowrap">
             <div class="bg-secondary text-white mx-5 mt-5">
-                    <input class="btn btn-primary" type="submit" value="Restart">
+                <a class="btn btn-primary" href="/index.html" role="button">Restart</a>
             </div>
         </div>
     </div>
         
     <script src="script.js"></script>
+    <script>
+        let result = analyze();
+        document.getElementById("type").innerHTML = result;
+        window.localStorage.setItem(favouriteKey, result);
+    </script>
 </body>
 
 </html>

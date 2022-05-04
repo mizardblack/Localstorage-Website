@@ -20,22 +20,27 @@
             </div>
         </div>
         <div class="bg-secondary text-white mt-5">
-            <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+            <input type="range" class="form-range" min="0" max="5" step="0.5" id="slider">
         </div>
     
         <div class="d-flex justify-content-center flex-nowrap">
             <div class="bg-secondary text-white mx-5 mt-5">
-                <button class="btn btn-primary m-5" type="submit">
+                <a class="btn btn-primary m-5" href="/Q1.html" role="button">
                     <i class="fas fa-chevron-left fa-lg" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-primary m-5" type="submit">
+                </a>
+                <a class="btn btn-primary m-5" href="/Q3.html" role="button" id="submitBtn">
                     <i class="fas fa-chevron-right fa-lg" aria-hidden="true"></i>
-                </button>
+                </a>
             </div>
         </div>
     </div>
     
     <script src="script.js"></script>
+    <script>
+        document.getElementById("submitBtn").onclick = function () {
+            writeData("slider", elephantKey);
+        }
+    </script>
 </body>
 
 </html>

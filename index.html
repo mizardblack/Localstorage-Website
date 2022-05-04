@@ -16,17 +16,34 @@
     <div class="container">
         <div class="d-flex justify-content-center flex-nowrap">
             <div class="bg-secondary text-white mx-5 mt-5">
-                <p class="h1">Let see what knid of person you are!</p>
+                <p class="h1">Let's test your personality!</p>
             </div>
         </div>
         <div class="d-flex justify-content-center flex-nowrap">
             <div class="bg-secondary text-white mx-5 mt-5">
-                <input class="btn btn-primary" type="submit" value="Start">
+                <a class="btn btn-primary m-5" onclick="clearData()" href="/Q1.html" role="button">
+                    Start
+                </a>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center flex-nowrap">
+            <div class="bg-secondary text-white mx-5 mt-2">
+                <p class="h6" id="history"></p>
             </div>
         </div>
     </div>
-    
-    <script src="script.js"></script>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script> 
+        const data = loadAffectionData();
+        console.log(data.favourite);
+        if (data.favourite == null){
+            document.getElementById("history").display = true;
+        }else{
+            document.getElementById("history").display = true;
+            document.getElementById("history").innerHTML = `The last tested person was a ${data.favourite} person 🤫`;
+        }
+    </script>
 </body>
 
 </html>
